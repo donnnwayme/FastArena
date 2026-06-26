@@ -1,0 +1,105 @@
+# FastArenas Configuration
+# -----------------------------------------------------------------------------
+# Customize messages, arenas, and spawn points for your server.
+# Colors: legacy (&a, &c) and hex (#rrggbb)
+
+# Permissions
+# -----------------------------------------------------------------------------
+# fastarena.reset     - /fa reset <arena>
+# fastarena.autoreset - /fa autoreset <arena> <seconds>
+# fastarena.create    - /fa create <arena> [format]
+# fastarena.reload    - /fa reload
+# fastarena.start     - /fa start <arena>
+# fastarena.stop      - /fa stop <arena>
+# fastarena.wand      - /fa wand
+# fastarena.remove    - /fa remove <arena>
+# fastarena.list      - /fa list
+# fastarena.setspawn  - /fa setspawn [name]
+# fastarena.admin     - all /fa commands
+
+# PlaceholderAPI
+# -----------------------------------------------------------------------------
+# %fastarena_timer_<arena>%         -> 1h 2m 5s
+# %fastarena_timer_<arena>_second%  -> 5
+# %fastarena_timer_<arena>_minute%  -> 2
+# %fastarena_timer_<arena>_hour%    -> 1
+
+# Arenas
+# -----------------------------------------------------------------------------
+
+# Skip Blocks
+blacklist-Blocks:
+  - chest
+  - bell
+
+spawn:
+  default:
+    world: world
+    pos:
+      - 0
+      - 0
+      - 0
+    yaw: 0
+    pitch: 0
+
+arena:
+  example:
+    name: "ArenaNameHere"
+    world: world
+    pos1:
+      - 0
+      - 0
+      - 0
+    pos2:
+      - 0
+      - 0
+      - 0
+    message: "&aArena %arena% has been reseted!"
+    clearitems: true
+    clearcrystal: true
+    tpplayers: false
+    spawn: default
+    enabled: false
+    offset: 0
+    autoreset: 0
+
+# Messages
+# -----------------------------------------------------------------------------
+# to remove Broadcast message just make it empty ( "" )
+
+# action_bar , message , title
+message-type: message
+
+console-message: "&cOnly players can execute this command in-game."
+permission: "You Don't have Permission To use this command"
+
+wand-name: "&6&lAʀᴇɴᴀ Wᴀɴᴅ"
+wand-lore:
+  - "&6&l● Left Click &7to select Position 1"
+  - "&6&l● Right Click &7to select Position 2"
+wand-material: STICK
+
+not-selected: "&cYou must select both &fPosition 1 &cand &fPosition 2&c first."
+
+arena-removed: "&aSuccessfully removed arena &f%arena%&a."
+arena-remove-failed: "&cFailed to delete the schematic file for arena &f%arena%&c."
+arena-not-found: "&cThe specified arena could not be found."
+arena-named-already: "&cThere is already an arena named &f%arena%&c."
+arena-loading-error: "&cError loading arena."
+arena-folder-missing: "&cArena folder does not exist. Please ensure it is created."
+arena-save: "&aArena saved as &f%arena%.schem&a."
+arena-failed: "&cFailed to save arena."
+
+position-1-set: "&6Position 1 set at &7(%pos1_x%, %pos1_y%, %pos1_z%)"
+position-2-set: "&6Position 2 set at &7(%pos2_x%, %pos2_y%, %pos2_z%)"
+position-not-set: "&cYou need to select both positions!"
+position-invalid: "&cInvalid pos1/pos2 in config for arena."
+
+world-not-specified: "&cWorld not specified for arena."
+world-not-loaded: "&cWorld is not loaded."
+
+player-spawn-message: "&aYou have been teleported to spawn!"
+spawn-save: "&aSuccessfully saved spawn &f%spawn%&a!"
+spawn-not-found: "&cSpawn point &f%spawn% &cnot found."
+
+reload-complete: "&aFastArenas has been successfully reloaded."

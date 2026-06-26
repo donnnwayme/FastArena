@@ -1,0 +1,58 @@
+name: FastArenas
+version: "2.4"
+main: com.tsotne.fastarenas.FastArenas    
+api-version: "1.20"
+author: geocotne
+commands:
+  fastarena:
+    description: Use to execute admin commands
+    aliases: [fa]
+    permission: fastarena.see
+permissions:
+  fastarena.see:
+    description: Allows player to see /fa command
+    default: true
+
+  fastarena.reset:
+    description: Allows player to use /fa reset <arena>
+    default: op
+
+  fastarena.create:
+    description: Allows player to use /fa create <arena> <format>
+    default: op
+
+  fastarena.reload:
+    description: Allows player to use /fa reload
+    default: op
+
+  fastarena.start:
+    description: Allows player to use /fa start <arena>
+    default: op
+
+  fastarena.stop:
+    description: Allows player to use /fa stop <arena>
+    default: op
+
+  fastarena.wand:
+    description: Allows player to use /fa wand
+    default: op
+
+  fastarena.remove:
+    description: Allows player to use /fa remove <arena>
+    default: op
+
+  fastarena.list:
+    description: Allows player to use /fa list
+    default: op
+
+  fastarena.admin:
+    description: Grants access to all /fa subcommands
+    default: op
+
+  fastarena.autoreset:
+    description: Grants access to all /fa autoreset
+    default: op
+
+  fastarena.setspawn:
+    description: Grants access to all /fa setspawn
+    default: op
